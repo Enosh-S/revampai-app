@@ -40,7 +40,7 @@ export default function Sidebar({ children }) {
                         
                         <div className="mx-1" >
                             
-                            <img className="w-12 h-12 " src="Revampai.svg" />
+                            <Image width={45} height={45} layout="fixed" src="/Revampai.svg" />
                             
 
                             
@@ -128,7 +128,7 @@ export default function Sidebar({ children }) {
                         </div>
                         <div className="avatar cursor-pointer ">
                             <div className="w-10 mx-auto rounded-full ring ring-secondary ring-offset-gray-900 hover:opacity-80 ring-offset-2">
-                                <Image src="https://Linkpi.lorem.space/image/face?hash=3174" width="20px" height="20px" layout="fill" />
+                                <Image src="https://Linkpi.lorem.space/image/face?hash=3174" width={20} height={20} layout="fixed" />
                             </div>
                         </div>
 
