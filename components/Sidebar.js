@@ -2,10 +2,12 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { RiLayout5Fill, RiFileTextFill, RiCalendarFill, RiVipDiamondFill } from "react-icons/ri";
 import { ImPilcrow } from "react-icons/im";
+import Image from 'next/image';
+
 
 
 export default function Sidebar({ children }) {
-    const router = useRouter();
+    
     const SidebarIcon = ({ icon, text = "" }) => (
         <div className="sidebar-icon">
             {icon}
@@ -16,10 +18,10 @@ export default function Sidebar({ children }) {
         </div>
     );
     const Divider = () => <hr className="sidebar-hr" />;
-    const ThemeIcon = () => {
-        const [darkTheme, setDarkTheme] = useDarkMode();
-        const handleMode = () => setDarkTheme(!darkTheme);
-    }
+    // const ThemeIcon = () => {
+    //     const [darkTheme, setDarkTheme] = useDarkMode();
+    //     const handleMode = () => setDarkTheme(!darkTheme);
+    // }
 
 
     return (
@@ -43,7 +45,7 @@ export default function Sidebar({ children }) {
 
                             
                         </div>
-                        <a href="/" className=" dark:text-white text-gray-700 font-sans font-semibold text-2xl"> Revamp AI</a>
+                        <Link href="/" className=" dark:text-white text-gray-700 font-sans font-semibold text-2xl"> Revamp AI</Link>
 
                     </div>
                     <div className="navbar-end">
@@ -79,54 +81,54 @@ export default function Sidebar({ children }) {
 
 
                     <div className= "tooltip-info tooltip" datatip="Dashboard">
-                        <Link href="/">
-                            <a>
-                                <SidebarIcon icon={<RiLayout5Fill size="28" />} />
-                            </a>
-                        </Link>
+                        
+                            <Link href= "/">
+                               <a> <SidebarIcon icon={<RiLayout5Fill size="28" />} /> </a>
+                            </Link>
+                        
 
                     </div>
                     <Divider />
                     <div className="flex flex-col space-y-1 mt-3 mb-auto">
                         <div >
-                            <Link href="/writing">
+                            
 
-                                <a>
-                                    <SidebarIcon icon={<ImPilcrow size="27" />} />
-                                </a>
+                                <Link href="/writing">
+                                   <a> <SidebarIcon icon={<ImPilcrow size="27" />} /> </a>
+                                </Link>
 
-                            </Link>
-
-                        </div>
-                        <div>
-                            <Link href="/docshistory">
-                                <a>
-                                    <SidebarIcon icon={<RiFileTextFill size="28" />} />
-                                </a>
-                            </Link>
+                            
 
                         </div>
                         <div>
-                            <Link href="/schedule">
-                                <a>
-                                    <SidebarIcon icon={<RiCalendarFill size="28" />} />
-                                </a>
-                            </Link>
+                            
+                                <Link href="/docshistory">
+                                   <a> <SidebarIcon icon={<RiFileTextFill size="28" />} /> </a>
+                                </Link>
+                            
+
+                        </div>
+                        <div>
+                            
+                                <Link href="/schedule">
+                                   <a> <SidebarIcon icon={<RiCalendarFill size="28" />} /> </a>
+                                </Link>
+                            
 
                         </div>
                     </div>
                     <div className="flex flex-col mb-3 space-y-2 mt-auto">
                         <div >
-                            <Link href="/pricing">
-                                <a>
-                                    <SidebarIcon icon={<RiVipDiamondFill size="28" />} />
-                                </a>
-                            </Link>
+                            
+                                <Link href="/pricing">
+                                   <a> <SidebarIcon icon={<RiVipDiamondFill size="28" />} /> </a>
+                                </Link>
+                            
 
                         </div>
                         <div className="avatar cursor-pointer ">
                             <div className="w-10 mx-auto rounded-full ring ring-secondary ring-offset-gray-900 hover:opacity-80 ring-offset-2">
-                                <img src="https://api.lorem.space/image/face?hash=3174" />
+                                <Image src="https://Linkpi.lorem.space/image/face?hash=3174" width="20px" height="20px" layout="fill" />
                             </div>
                         </div>
 
